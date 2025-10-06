@@ -1,0 +1,17 @@
+# --- Escritura de archivo ---
+# Abre (o crea) el archivo my_notes.txt en modo escritura
+with open("my_notes.txt", "w") as archivo:
+    archivo.write("1. Hoy aprendí a trabajar con archivos en Python.\n")
+    archivo.write("2. Me siento más cómodo usando 'with open' para manejar cierres automáticos.\n")
+    archivo.write("3. Es importante cerrar los archivos para evitar pérdida de datos.\n")
+
+# --- Lectura del archivo ---
+# Abre el archivo en modo lectura
+archivo = open("my_notes.txt", "r")
+
+# Lee línea por línea y muestra en consola
+for linea in archivo:
+    print(linea.strip())  # .strip() elimina los saltos de línea
+
+# Cierre manual del archivo
+archivo.close()
